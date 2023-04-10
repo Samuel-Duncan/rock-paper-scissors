@@ -15,8 +15,32 @@ function getPlayerChoice() {
   const formattedChoice = playerChoice.toLowerCase();
   return formattedChoice;
 }
+const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();
 
-console.log(getPlayerChoice());
 // Play a single round
-// Declare winner
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === 'rock' && computerSelection === 'rock') {
+    return 'It\'s a tie! Play again.';
+  } if (playerSelection === 'rock' && computerSelection === 'paper') {
+    return 'Computer wins! Paper beats rock.';
+  } if (playerSelection === 'rock' && computerSelection === 'scissors') {
+    return 'Player wins! Rock beats scissors.';
+  } if (playerSelection === 'paper' && computerSelection === 'rock') {
+    return 'Player wins! Paper beats rock.';
+  } if (playerSelection === 'paper' && computerSelection === 'paper') {
+    return 'It\'s a tie! Play again.';
+  } if (playerSelection === 'paper' && computerSelection === 'scissors') {
+    return 'Computer wins! Scissors beats paper.';
+  } if (playerSelection === 'scissors' && computerSelection === 'rock') {
+    return 'Computer wins! Rock beats scissors.';
+  } if (playerSelection === 'scissors' && computerSelection === 'paper') {
+    return 'Player wins! Scissors beats paper.';
+  } if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+    return 'It\'s a tie! Play again.';
+  }
+}
+
 // Play a 5 round game
+
+// Declare winner
